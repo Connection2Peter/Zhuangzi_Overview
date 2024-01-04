@@ -4,7 +4,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class PopImage {
   String imageName;
   String path2Image;
-  int x, y, width, height;
+  double x, y, width, height;
 
   PopImage(
     this.imageName,
@@ -46,7 +46,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   List<PopImage> popImages = [
-    PopImage('莊子心性', 'assets/莊子心性-人本無情.jpg', 0, 0, 100, 100),
+    PopImage('莊子心性', 'assets/莊子心性-人本無情.jpg', 35, 105, 100, 100),
   ];
 
   @override
@@ -69,17 +69,27 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
         child: Stack(
-          children: [
-            Positioned(
-              left: anchorX,
-              top: anchorY,
-              child: Container(
-                color: Colors.purpleAccent,
-                width: 10.w,
-                height: 10.h,
+          children: popImages.map((e) {
+            return Positioned(
+              left: e.x + anchorX,
+              top: e.y + anchorY,
+              width: e.width,
+              height: e.height,
+              child: GestureDetector(
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return popUpImage(e.imageName, e.path2Image);
+                    },
+                  );
+                },
+                child: Container(
+                  color: Colors.purpleAccent,
+                ),
               ),
-            ),
-          ],
+            );
+          }).toList(),
         ),
       ),
     );
