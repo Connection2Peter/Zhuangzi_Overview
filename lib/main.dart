@@ -46,35 +46,51 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   List<PopImage> popImages = [
-    PopImage('莊子心性', 'assets/莊子心性-人本無情.jpg', 35, 105, 100, 100),
+    PopImage('莊子心性 - 人本無情', 'assets/莊子心性-人本無情.jpg', 500, 110, 190, 70),
+    PopImage('莊子心性 - 借貸', 'assets/莊子心性-借貸.jpg', 500, 185, 190, 175),
+    PopImage('莊子心性 - 不為官', 'assets/莊子心性-不為官.jpg', 500, 365, 190, 120),
+    PopImage('莊子心性 - 莊周夢蝶', 'assets/莊紫心性-莊周夢蝶.png', 700, 110, 190, 115),
+    PopImage('莊子心性 - 生死四時', 'assets/莊子心性-生死四時.jpeg', 700, 230, 190, 90),
+    PopImage('莊子心性 - 天地為棺', 'assets/莊子心性-天地為官.jpg', 700, 323, 190, 105),
+    PopImage('逍遙遊子 - 鯤與鵬', 'assets/逍遙遊子-鯤與鵬.jpeg', 950, 120, 245, 115),
+    PopImage('逍遙遊子 - 列子1.2', 'assets/逍遙遊子-列子1.2.jpeg', 950, 240, 245, 85),
+    PopImage('逍遙遊子 - 山人', 'assets/逍遙遊子-山人.jpg', 950, 330, 245, 140),
+    PopImage('逍遙遊子 - 山人', 'assets/逍遙遊子-山人.jpg', 1200, 120, 230, 45),
+    PopImage('逍遙遊子 - 列子1.4', 'assets/逍遙遊子-列子1.4.jpeg', 1200, 170, 230, 150),
+    PopImage('邯鄲學步', 'assets/邯鄲學步.png', 1920, 150, 430, 90),
+    PopImage('井底之蛙', 'assets/井底之蛙.jpeg', 1920, 1030, 430, 70),
   ];
 
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    double imageRatio = 2482 / 1757;
+    double imageWidth = 2378;
+    double imageHeight = 1554;
+    double imageRatio = imageWidth / imageHeight;
     double needWidth = screenSize.height * imageRatio;
     double needHeight = screenSize.width / imageRatio;
     double scaledWidth = needWidth > screenSize.width ? screenSize.width : needWidth;
     double scaledHeight = needHeight < screenSize.height ? needHeight : screenSize.height;
     double anchorX = (screenSize.width - scaledWidth) / 2;
     double anchorY = (screenSize.height - scaledHeight) / 2;
+    double imageScaleWidth = scaledWidth / imageWidth;
+    double imageScaleHeight = scaledHeight / imageHeight;
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/華光三部曲_final_page-0005.jpg"),
+            image: AssetImage("assets/華光三部曲_final_page-0009.jpg"),
             fit: BoxFit.contain,
           ),
         ),
         child: Stack(
           children: popImages.map((e) {
             return Positioned(
-              left: e.x + anchorX,
-              top: e.y + anchorY,
-              width: e.width,
-              height: e.height,
+              left: e.x * imageScaleWidth + anchorX,
+              top: e.y * imageScaleHeight + anchorY,
+              width: e.width * imageScaleWidth,
+              height: e.height * imageScaleHeight,
               child: GestureDetector(
                 onTap: () {
                   showDialog(
@@ -84,9 +100,7 @@ class _MainPageState extends State<MainPage> {
                     },
                   );
                 },
-                child: Container(
-                  color: Colors.purpleAccent,
-                ),
+                child: Container(color: Colors.purpleAccent.withOpacity(0.3)),
               ),
             );
           }).toList(),
@@ -115,8 +129,8 @@ class _MainPageState extends State<MainPage> {
             fit: BoxFit.fitWidth,
             child: Image.asset(
               path2Image,
-              width: 80.w,
-              height: 80.h,
+              width: 60.w,
+              height: 60.h,
             ),
           );
         },
