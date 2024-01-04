@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+class PopImage {
+  String imageName;
+  String path2Image;
+  int x, y, width, height;
+
+  PopImage(
+    this.imageName,
+    this.path2Image,
+    this.x,
+    this.y,
+    this.width,
+    this.height,
+  );
+}
+
 void main() {
   runApp(const ZhuangziOverview());
 }
@@ -30,28 +45,41 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  List<PopImage> popImages = [
+    PopImage('莊子心性', 'assets/莊子心性-人本無情.jpg', 0, 0, 100, 100),
+  ];
+
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    double imageRatio = 2482 / 1757;
+    double needWidth = screenSize.height * imageRatio;
+    double needHeight = screenSize.width / imageRatio;
+    double scaledWidth = needWidth > screenSize.width ? screenSize.width : needWidth;
+    double scaledHeight = needHeight < screenSize.height ? needHeight : screenSize.height;
+    double anchorX = (screenSize.width - scaledWidth) / 2;
+    double anchorY = (screenSize.height - scaledHeight) / 2;
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        child: GestureDetector(
-          onTap: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return popUpImage('莊子心性', 'assets/莊子心性-人本無情.jpg');
-              },
-            );
-          },
-          child: FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Image.asset(
-              'assets/華光三部曲_final_page-0005.jpg',
-              width: 100.w,
-              height: 100.h,
-            ),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/華光三部曲_final_page-0005.jpg"),
+            fit: BoxFit.contain,
           ),
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              left: anchorX,
+              top: anchorY,
+              child: Container(
+                color: Colors.purpleAccent,
+                width: 10.w,
+                height: 10.h,
+              ),
+            ),
+          ],
         ),
       ),
     );
