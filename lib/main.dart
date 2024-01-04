@@ -45,6 +45,9 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  double translateX = 0;
+  double translateY = 0;
+  double windowScale = 1;
   List<PopImage> popImages = [
     PopImage('莊子心性 - 人本無情', 'assets/莊子心性-人本無情.jpg', 500, 110, 190, 70),
     PopImage('莊子心性 - 借貸', 'assets/莊子心性-借貸.jpg', 500, 185, 190, 175),
@@ -76,37 +79,80 @@ class _MainPageState extends State<MainPage> {
     double imageScaleWidth = scaledWidth / imageWidth;
     double imageScaleHeight = scaledHeight / imageHeight;
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/華光三部曲_final_page-0009.jpg"),
-            fit: BoxFit.contain,
+        body: GestureDetector(
+          onPanUpdate: (details) {
+            setState(() {
+              translateX += details.delta.dx;
+              translateY += details.delta.dy;
+            });
+          },
+          child: Transform.scale(
+            scale: windowScale,
+            child: Transform.translate(
+              offset: Offset(translateX, translateY),
+              child: Container(
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/華光三部曲_final_page-0009.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                child: Stack(
+                  children: popImages.map((e) {
+                    return Positioned(
+                      left: e.x * imageScaleWidth + anchorX,
+                      top: e.y * imageScaleHeight + anchorY,
+                      width: e.width * imageScaleWidth,
+                      height: e.height * imageScaleHeight,
+                      child: GestureDetector(
+                        onTap: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return popUpImage(e.imageName, e.path2Image);
+                            },
+                          );
+                        },
+                        child: Container(color: Colors.purpleAccent.withOpacity(0.3)),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ),
           ),
         ),
-        child: Stack(
-          children: popImages.map((e) {
-            return Positioned(
-              left: e.x * imageScaleWidth + anchorX,
-              top: e.y * imageScaleHeight + anchorY,
-              width: e.width * imageScaleWidth,
-              height: e.height * imageScaleHeight,
-              child: GestureDetector(
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return popUpImage(e.imageName, e.path2Image);
-                    },
-                  );
+        floatingActionButton: Container(
+          height: 100,
+          width: 50,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.purple.withOpacity(0.3),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    windowScale += 0.3;
+                  });
                 },
-                child: Container(color: Colors.purpleAccent.withOpacity(0.3)),
+                icon: const Icon(Icons.zoom_in, color: Colors.black),
               ),
-            );
-          }).toList(),
-        ),
-      ),
-    );
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    windowScale -= 0.3;
+                  });
+                },
+                icon: const Icon(Icons.zoom_out, color: Colors.black),
+              ),
+            ],
+          ),
+        ));
   }
 
   AlertDialog popUpImage(String imageName, path2Image) {
