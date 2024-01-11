@@ -136,6 +136,7 @@ class _MainPageState extends State<MainPage> {
             children: [
               IconButton(
                 onPressed: () {
+
                   setState(() {
                     windowScale += 0.3;
                   });
@@ -144,11 +145,13 @@ class _MainPageState extends State<MainPage> {
               ),
               IconButton(
                 onPressed: () {
+                  if (windowScale <= 0.3) return;
+
                   setState(() {
                     windowScale -= 0.3;
                   });
                 },
-                icon: const Icon(Icons.zoom_out, color: Colors.black),
+                icon: Icon(Icons.zoom_out, color: windowScale <= 0.3 ? Colors.grey : Colors.black),
               ),
             ],
           ),
