@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-String pathRef = 'Reference';
-
 class PopImage {
   String imageName;
   String path2Image;
@@ -51,19 +49,19 @@ class _MainPageState extends State<MainPage> {
   double translateY = 0;
   double windowScale = 1;
   List<PopImage> popImages = [
-    PopImage('莊子心性 - 人本無情', '$pathRef/莊子心性-人本無情.jpg', 500, 110, 190, 70),
-    PopImage('莊子心性 - 借貸', '$pathRef/莊子心性-借貸.jpg', 500, 185, 190, 175),
-    PopImage('莊子心性 - 不為官', '$pathRef/莊子心性-不為官.jpg', 500, 365, 190, 120),
-    PopImage('莊子心性 - 莊周夢蝶', '$pathRef/莊紫心性-莊周夢蝶.png', 700, 110, 190, 115),
-    PopImage('莊子心性 - 生死四時', '$pathRef/莊子心性-生死四時.jpeg', 700, 230, 190, 90),
-    PopImage('莊子心性 - 天地為棺', '$pathRef/莊子心性-天地為官.jpg', 700, 323, 190, 105),
-    PopImage('逍遙遊子 - 鯤與鵬', '$pathRef/逍遙遊子-鯤與鵬.jpeg', 950, 120, 245, 115),
-    PopImage('逍遙遊子 - 列子1.2', '$pathRef/逍遙遊子-列子1.2.jpeg', 950, 240, 245, 85),
-    PopImage('逍遙遊子 - 山人', '$pathRef/逍遙遊子-山人.jpg', 950, 330, 245, 140),
-    PopImage('逍遙遊子 - 山人', '$pathRef/逍遙遊子-山人.jpg', 1200, 120, 230, 45),
-    PopImage('逍遙遊子 - 列子1.4', '$pathRef/逍遙遊子-列子1.4.jpeg', 1200, 170, 230, 150),
-    PopImage('邯鄲學步', '$pathRef/邯鄲學步.png', 1920, 150, 430, 90),
-    PopImage('井底之蛙', '$pathRef/井底之蛙.jpeg', 1920, 1030, 430, 70),
+    PopImage('莊子心性 - 人本無情', 'reference/1-1.jpg', 500, 110, 190, 70),
+    PopImage('莊子心性 - 借貸', 'reference/2-2.jpg', 500, 185, 190, 175),
+    PopImage('莊子心性 - 不為官', 'reference/2-3.jpg', 500, 365, 190, 120),
+    PopImage('莊子心性 - 莊周夢蝶', 'reference/2-4.png', 700, 110, 190, 115),
+    PopImage('莊子心性 - 生死四時', 'reference/2-5.jpeg', 700, 230, 190, 90),
+    PopImage('莊子心性 - 天地為棺', 'reference/2-6.jpg', 700, 323, 190, 105),
+    PopImage('逍遙遊子 - 鯤與鵬', 'reference/2-1.jpeg', 950, 120, 245, 115),
+    PopImage('逍遙遊子 - 列子1.2', 'reference/1-2.jpeg', 950, 240, 245, 85),
+    PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 950, 330, 245, 140),
+    PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 1200, 120, 230, 45),
+    PopImage('逍遙遊子 - 列子1.4', 'reference/1-4.jpeg', 1200, 170, 230, 150),
+    PopImage('邯鄲學步', 'reference/7-1.png', 1920, 150, 430, 90),
+    PopImage('井底之蛙', 'reference/8-3.jpeg', 1920, 1030, 430, 70),
   ];
 
   @override
