@@ -49,19 +49,19 @@ class _MainPageState extends State<MainPage> {
   double translateY = 0;
   double windowScale = 1;
   List<PopImage> popImages = [
-    PopImage('莊子心性 - 人本無情', 'reference/1-1.jpg', 500, 110, 190, 70),
-    PopImage('莊子心性 - 借貸', 'reference/2-2.jpg', 500, 185, 190, 175),
-    PopImage('莊子心性 - 不為官', 'reference/2-3.jpg', 500, 365, 190, 120),
-    PopImage('莊子心性 - 莊周夢蝶', 'reference/2-4.png', 700, 110, 190, 115),
-    PopImage('莊子心性 - 生死四時', 'reference/2-5.jpeg', 700, 230, 190, 90),
-    PopImage('莊子心性 - 天地為棺', 'reference/2-6.jpg', 700, 323, 190, 105),
-    PopImage('逍遙遊子 - 鯤與鵬', 'reference/2-1.jpeg', 950, 120, 245, 115),
-    PopImage('逍遙遊子 - 列子1.2', 'reference/1-2.jpeg', 950, 240, 245, 85),
-    PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 950, 330, 245, 140),
-    PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 1200, 120, 230, 45),
-    PopImage('逍遙遊子 - 列子1.4', 'reference/1-4.jpeg', 1200, 170, 230, 150),
-    PopImage('邯鄲學步', 'reference/7-1.png', 1920, 150, 430, 90),
-    PopImage('井底之蛙', 'reference/8-3.jpeg', 1920, 1030, 430, 70),
+    PopImage('莊子心性 - 人本無情', 'reference/2-1.jpg', 540, 115, 190, 80),
+    PopImage('莊子心性 - 借貸', 'reference/2-2.jpg', 540, 200, 190, 185),
+    PopImage('莊子心性 - 不為官', 'reference/2-3.jpg', 540, 390, 190, 115),
+    PopImage('莊子心性 - 莊周夢蝶', 'reference/2-4.png', 745, 115, 190, 130),
+    PopImage('莊子心性 - 生死四時', 'reference/2-5.jpeg', 745, 250, 190, 90),
+    PopImage('莊子心性 - 天地為棺', 'reference/2-6.jpg', 745, 343, 190, 100),
+    PopImage('逍遙遊子 - 鯤與鵬', 'reference/1-1.jpeg', 980, 150, 210, 100),
+    PopImage('逍遙遊子 - 列子1.2', 'reference/1-2.jpeg', 980, 255, 210, 80),
+    PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 980, 340, 210, 130),
+    PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 1200, 150, 200, 45),
+    PopImage('逍遙遊子 - 列子1.4', 'reference/1-4.jpeg', 1200, 198, 200, 135),
+    PopImage('邯鄲學步', 'reference/7-1.png', 1880, 330, 360, 80),
+    PopImage('井底之蛙', 'reference/8-3.jpeg', 1880, 1050, 360, 80),
   ];
 
   @override
