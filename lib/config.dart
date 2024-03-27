@@ -59,6 +59,36 @@ List<PopImage> popImages = [
   PopImage('棄聖止之 - 知所為', 'reference/8-4.jpeg', 1885, 1195, 355, 60),
   PopImage('棄聖止之 - 知所損', 'reference/8-5.jpeg', 1885, 1260, 355, 38),
   PopImage('棄聖止之 - 知無用', 'reference/8-6.jpeg', 1885, 1300, 355, 60),
+
+  // ### 9. 心齋坐忘
+  PopImage('心齋坐忘 - 心智專一用心不用耳', 'reference/9-1.jpg', 600, 1130, 230, 140),
+  PopImage('心齋坐忘 - 空明容物用氣不用心', 'reference/9-2.jpg', 600, 1275, 230, 100),
+  PopImage('心齋坐忘 - 人間世', 'reference/9-3.jpg', 600, 1395, 230, 100),
+  PopImage('心齋坐忘 - 顔回坐忘', 'reference/9-4.jpg', 840, 1130, 250, 60),
+  PopImage('心齋坐忘 - 忘欲忘知', 'reference/9-5.jpg', 840, 1195, 250, 110),
+  PopImage('心齋坐忘 - 忘己忘治', 'reference/9-6.jpg', 840, 1320, 250, 90),
+
+  // ### 10. 六步六境
+  PopImage('六步六境 - 適性不忘本', 'reference/10-1.jpg', 1240, 1130, 280, 75),
+  PopImage('六步六境 - 喜怒不入心', 'reference/10-2.jpg', 1240, 1210, 280, 130),
+  PopImage('六步六境 - 萬物一体侍', 'reference/10-3.jpg', 1240, 1345, 280, 90),
+  PopImage('六步六境 - 死生不為擾', 'reference/10-4.jpg', 1525, 1130, 280, 110),
+  PopImage('六步六境 - 禍福不足憂', 'reference/10-5.jpg', 1525, 1245, 280, 130),
+  PopImage('六步六境 - 逍遙自由身', 'reference/10-6.jpg', 1525, 1380, 280, 85),
+
+  // ### 11. 無為守本
+  PopImage('無為守本 - 不要不自量力', 'reference/11-1.jpg', 140, 410, 340, 60),
+  PopImage('無為守本 - 不要違本性', 'reference/11-2.jpg', 140, 475, 340, 70),
+  PopImage('無為守本 - 不要溺愛', 'reference/11-3.jpeg', 140, 550, 340, 70),
+  PopImage('無為守本 - 無功不受祿', 'reference/11-4.jpeg', 140, 625, 340, 80),
+  PopImage('無為守本 - 聖人亡人國而不失人心', 'reference/11-5.jpeg', 140, 710, 340, 42),
+  PopImage('無為守本 - 聖人觀予天下而不助', 'reference/11-6.jpeg', 140, 755, 340, 70),
+
+  // ### 12. 三劍四患
+  PopImage('三劍四患 - 三劍三戰', 'reference/12-1.jpeg', 140, 1000, 340, 210),
+  PopImage('三劍四患 - 識人九要', 'reference/12-2.jpeg', 140, 1213, 340, 83),
+  PopImage('三劍四患 - 八病', 'reference/12-3.jpeg', 140, 1300, 340, 90),
+  PopImage('三劍四患 - 四患', 'reference/12-4.jpeg', 140, 1393, 340, 75),
 ];
 
 /* 參考標題
