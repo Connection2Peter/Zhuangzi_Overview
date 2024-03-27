@@ -4,19 +4,19 @@ double factor = 0.3;
 String tabName = '莊子通覽圖';
 List<PopImage> popImages = [
   // ### 1. 逍遙遊子
-  PopImage('逍遙遊子 - 鯤與鵬', 'reference/1-1.jpeg', 980, 150, 210, 100),
-  PopImage('逍遙遊子 - 列子1.2', 'reference/1-2.jpeg', 980, 255, 210, 80),
-  PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 980, 340, 210, 130),
-  PopImage('逍遙遊子 - 山人', 'reference/1-3.jpg', 1200, 150, 200, 45),
-  PopImage('逍遙遊子 - 列子1.4', 'reference/1-4.jpeg', 1200, 198, 200, 135),
+  PopImage('逍遙遊子 - 逍遙似巨棚展翅天際', 'reference/1-1.jpeg', 980, 150, 210, 100),
+  PopImage('逍遙遊子 - 逍遙似列子御風而行', 'reference/1-2.jpeg', 980, 255, 210, 80),
+  PopImage('逍遙遊子 - 逍遙似姑射山神人游乎四海', 'reference/1-3.jpg', 980, 340, 210, 130),
+  PopImage('逍遙遊子 - 逍遙似姑射山神人游乎四海', 'reference/1-3.jpg', 1200, 150, 200, 45),
+  PopImage('逍遙遊子 - 逍遙似許由不受天下', 'reference/1-4.jpeg', 1200, 198, 200, 135),
 
   // ### 2. 莊子心性
-  PopImage('莊子心性 - 人本無情', 'reference/2-1.jpg', 540, 115, 190, 80),
-  PopImage('莊子心性 - 借貸', 'reference/2-2.jpg', 540, 200, 190, 185),
-  PopImage('莊子心性 - 不為官', 'reference/2-3.jpg', 540, 390, 190, 115),
-  PopImage('莊子心性 - 莊周夢蝶', 'reference/2-4.png', 745, 115, 190, 130),
-  PopImage('莊子心性 - 生死四時', 'reference/2-5.jpeg', 745, 250, 190, 90),
-  PopImage('莊子心性 - 天地為棺', 'reference/2-6.jpg', 745, 343, 190, 100),
+  PopImage('莊子心性 - 入故無情', 'reference/2-1.jpg', 540, 115, 190, 80),
+  PopImage('莊子心性 - 得斗升之水然活', 'reference/2-2.jpg', 540, 200, 190, 185),
+  PopImage('莊子心性 - 生而曳尾于塗中', 'reference/2-3.jpg', 540, 390, 190, 115),
+  PopImage('莊子心性 - 物化', 'reference/2-4.png', 745, 115, 190, 130),
+  PopImage('莊子心性 - 生死為四時行', 'reference/2-5.jpeg', 745, 250, 190, 90),
+  PopImage('莊子心性 - 以天地為棺槨', 'reference/2-6.jpg', 745, 343, 190, 100),
 
   // ### 3. 孔老之辯
   PopImage('孔老之辯 - 忘物忘天忘己', 'reference/3-1.jpg', 1440, 140, 400, 44),
@@ -26,11 +26,39 @@ List<PopImage> popImages = [
   PopImage('孔老之辯 - 六經之辯', 'reference/3-5.jpg', 1440, 395, 400, 50),
   PopImage('孔老之辯 - 至美至樂', 'reference/3-6.jpg', 1440, 448, 400, 55),
 
+  // ### 4. 遊心
+  PopImage('遊心 - 齊物我', 'reference/4-1.jpg', 990, 600, 400, 70),
+  PopImage('遊心 - 齊譽非', 'reference/4-2.jpg', 990, 675, 400, 135),
+  PopImage('遊心 - 齊禍福', 'reference/4-3.jpg', 990, 815, 400, 105),
+  PopImage('遊心 - 齊生死', 'reference/4-4.jpg', 990, 925, 400, 70),
+
+  // ### 5. 無名
+  PopImage('無名 - 為善無近名', 'reference/5-1.jpeg', 540, 630, 400, 108),
+  PopImage('無名 - 為混沌開七竅', 'reference/5-2.jpeg', 540, 740, 400, 68),
+  PopImage('無名 - 殉利殉名殉家殉天下', 'reference/5-3.jpeg', 540, 810, 400, 68),
+  PopImage('無名 - 忠未必信孝未必愛', 'reference/5-4.jpeg', 540, 880, 400, 90),
+
+  // ### 6. 無功
+  PopImage('無功 - 無欲而天下足', 'reference/6-1.jpg', 1440, 600, 400, 110),
+  PopImage('無功 - 無為而萬物化', 'reference/6-2.jpg', 1440, 715, 400, 145),
+  PopImage('無功 - 淵靜而百姓定', 'reference/6-3.jpg', 1440, 865, 400, 40),
+  PopImage('無功 - 外化而內不化', 'reference/6-4.jpg', 1440, 915, 400, 80),
+
   // ### 7. 大美不言
-  PopImage('邯鄲學步', 'reference/7-1.png', 1880, 330, 360, 80),
+  PopImage('大美不言 - 天地有大美而不言', 'reference/7-1.png', 1885, 325, 355, 80),
+  PopImage('大美不言 - 大言不辯', 'reference/7-2.jpeg', 1885, 410, 355, 80),
+  PopImage('大美不言 - 大同無已', 'reference/7-3.jpeg', 1885, 495, 355, 55),
+  PopImage('大美不言 - 黑鳥白鳥', 'reference/7-4.jpeg', 1885, 555, 355, 60),
+  PopImage('大美不言 - 治之過也', 'reference/7-5.jpeg', 1885, 620, 355, 70),
+  PopImage('大美不言 - 道何在', 'reference/7-6.jpeg', 1885, 700, 355, 100),
 
   // ### 8. 棄聖止之
-  PopImage('井底之蛙', 'reference/8-3.jpeg', 1880, 1050, 360, 80),
+  PopImage('棄聖止之 - 棄聖智天下平', 'reference/8-1.jpeg', 1885, 970, 355, 80),
+  PopImage('棄聖止之 - 使天下忘我難', 'reference/8-2.jpeg', 1885, 1055, 355, 80),
+  PopImage('棄聖止之 - 井底蛙', 'reference/8-3.jpeg', 1885, 1140, 355, 50),
+  PopImage('棄聖止之 - 知所為', 'reference/8-4.jpeg', 1885, 1195, 355, 60),
+  PopImage('棄聖止之 - 知所損', 'reference/8-5.jpeg', 1885, 1260, 355, 38),
+  PopImage('棄聖止之 - 知無用', 'reference/8-6.jpeg', 1885, 1300, 355, 60),
 ];
 
 /* 參考標題
