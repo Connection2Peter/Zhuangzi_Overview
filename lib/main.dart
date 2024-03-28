@@ -82,7 +82,7 @@ class _MainPageState extends State<MainPage> {
                         showDialog(
                           context: context,
                           builder: (BuildContext context) {
-                            return popUpImage(context, e.imageName, e.path2Image);
+                            return popUpImage(context, e);
                           },
                         );
                       },

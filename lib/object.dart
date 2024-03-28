@@ -1,14 +1,16 @@
 class PopImage {
-  String imageName;
-  String path2Image;
   double x, y, width, height;
+  String path2Image;
+  String imageName;
+  String imageText;
 
   PopImage(
-    this.imageName,
-    this.path2Image,
     this.x,
     this.y,
     this.width,
     this.height,
+    this.path2Image,
+    this.imageName,
+    this.imageText,
   );
 }
