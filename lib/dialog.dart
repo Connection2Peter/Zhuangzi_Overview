@@ -1,3 +1,4 @@
+import 'tts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -27,5 +28,9 @@ AlertDialog popUpImage(BuildContext context, String imageName, path2Image) {
         );
       },
     ),
+    actionsAlignment: MainAxisAlignment.center,
+    actions: [
+      Text2Speech(textToSpeak: imageName),
+    ],
   );
 }
