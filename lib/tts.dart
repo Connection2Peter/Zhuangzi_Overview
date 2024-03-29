@@ -1,10 +1,16 @@
+import 'object.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 class Text2Speech extends StatefulWidget {
-  const Text2Speech({super.key, required this.textToSpeak});
+  const Text2Speech({
+    super.key,
+    required this.popImage,
+    required this.onOpen,
+  });
 
-  final String textToSpeak;
+  final PopImage popImage;
+  final void Function() onOpen;
 
   @override
   State<Text2Speech> createState() => _Text2SpeechState();
@@ -25,7 +31,7 @@ class _Text2SpeechState extends State<Text2Speech> {
   }
 
   Future<void> _speak() async {
-    await _flutterTts.speak(widget.textToSpeak);
+    await _flutterTts.speak(widget.popImage.imageText);
   }
 
   Future<void> _reset() async {
@@ -41,6 +47,11 @@ class _Text2SpeechState extends State<Text2Speech> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        ElevatedButton(
+          onPressed: widget.onOpen,
+          child: Text(widget.popImage.isShow ? '隱藏文字' : '顯示文字'),
+        ),
+        const SizedBox(width: 20),
         ElevatedButton(
           onPressed: _speak,
           child: const Text('用語音說故事'),
