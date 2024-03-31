@@ -36,7 +36,7 @@ Widget popUpImage(BuildContext context, PopImage popImage) {
                   SingleChildScrollView(
                     child: Container(
                       width: 20.w,
-                      margin: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.only(left: 35),
                       alignment: Alignment.center,
                       child: Text(popImage.imageText, style: const TextStyle(fontSize: 20)),
                     ),

@@ -48,11 +48,6 @@ class _Text2SpeechState extends State<Text2Speech> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ElevatedButton(
-          onPressed: widget.onOpen,
-          child: Text(widget.popImage.isShow ? '隱藏文字' : '顯示文字'),
-        ),
-        const SizedBox(width: 20),
-        ElevatedButton(
           onPressed: _speak,
           child: const Text('用語音說故事'),
         ),
@@ -65,6 +60,11 @@ class _Text2SpeechState extends State<Text2Speech> {
         ElevatedButton(
           onPressed: _pause,
           child: const Text('暫停語音'),
+        ),
+        const SizedBox(width: 20),
+        ElevatedButton(
+          onPressed: widget.onOpen,
+          child: Text(widget.popImage.isShow ? '隱藏文字' : '顯示文字'),
         ),
       ],
     );
