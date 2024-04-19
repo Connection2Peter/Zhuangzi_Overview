@@ -35,7 +35,7 @@ Widget popUpImage(BuildContext context, PopImage popImage) {
                 if (popImage.isShow)
                   SingleChildScrollView(
                     child: Container(
-                      width: 20.w,
+                      width: 30.w,
                       margin: const EdgeInsets.only(left: 35),
                       alignment: Alignment.center,
                       child: Column(
@@ -44,7 +44,7 @@ Widget popUpImage(BuildContext context, PopImage popImage) {
                           const Text("本文:", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
                           const Divider(thickness: 1),
                           Text(popImage.imageText, style: const TextStyle(fontSize: 20)),
-                          const Divider(thickness: 2),
+                          const Divider(thickness: 3),
                           const Text("解說:", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
                           const Divider(thickness: 1),
                           Text(popImage.imageExplain, style: const TextStyle(fontSize: 20)),

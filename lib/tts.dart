@@ -31,7 +31,7 @@ class _Text2SpeechState extends State<Text2Speech> {
   }
 
   Future<void> _speak() async {
-    await _flutterTts.speak("本文:\n${widget.popImage.imageText}解釋:\n${widget.popImage.imageExplain}");
+    await _flutterTts.speak("本文:\n${widget.popImage.imageText}解說:\n${widget.popImage.imageExplain}");
   }
 
   Future<void> _reset() async {
